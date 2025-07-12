@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/output.css" rel="stylesheet" />
+    <title>Agence matrimoniale – Landing</title>
+</head>
+
+<body class="antialiased">
+
+    <!-- CLASSES FIXES POUR QUE TAILWIND LES GARDE DANS LE CSS -->
+    <div class="hidden">
+        <div class="fixed top-0 left-0 right-0 w-full z-[60] shadow-lg"></div>
+        <div class="bg-gradient-to-br from-[#D94A79] via-[#F3B7A6] to-[#F68E5F]"></div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="bg-gradient-to-br from-[#D94A79] via-[#F3B7A6] to-[#F68E5F]">
+        <nav
+            class="navbar py-2 px-4 md:px-28 flex items-center justify-between border-b border-dating-gray-300/35 transition-all duration-300 ease-in-out">
+
+            <!-- Logo -->
+            <div class="w-12 h-12 overflow-hidden bg-dating-white-300 rounded-full p-1">
+                <img src="./assets/img/logo.png" class="w-full h-full object-cover" alt="agence matrimoniale" />
+            </div>
+
+            <!-- Liens -->
+            <div class="capitalize">
+                <ul class="flex items-center gap-4 text-dating-white-300">
+                    <li class="hidden md:inline-block hover:text-dating-pink-400 transition-colors">
+                        <a href="index.html">home</a>
+                    </li>
+                    <li class="hidden md:inline-block hover:text-dating-pink-400 transition-colors">
+                        <a href="#">about</a>
+                    </li>
+                    <li class="hidden md:inline-block hover:text-dating-pink-400 transition-colors">
+                        <a href="#">service</a>
+                    </li>
+                    <li class="hidden md:inline-block hover:text-dating-pink-400 transition-colors">
+                        <a href="#">contact</a>
+                    </li>
+                    <li
+                        class="bg-dating-white-300 text-dating-pink-400 hover:text-dating-white-300 hover:bg-dating-pink-400 capitalize
+                         transition-colors cursor-pointer py-3 px-6 rounded-full">
+                        <a href="inscription.html">join us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- contenu de la bannière -->
+        <section class="py-12 px-4 md:py-16 md:px-28">
+            <div class="container flex flex-col md:flex-row items-center gap-8 text-center md:text-start">
+                <!-- Colonne gauche -->
+                <div class="banner-left text-dating-white-300 w-full">
+                    <span class="shadow py-2 px-4 uppercase text-[10px] md:text-[14px]">Welcome to Afromeet</span>
+                    <h1 class="text-4xl md:text-5xl mb-4 font-bold mt-8">
+                        <span class="">Afromeet</span> – Curated Matches for Modern Romance
+                    </h1>
+                    <p class="text-[16px]">
+                        At <b class="uppercase">Afromeet</b>, we go beyond algorithms to offer curated matches tailored to your values and lifestyle. Designed for
+                        modern singles seeking meaningful romance, our elite matchmaking service connects hearts for authentic, lasting
+                        relationships.
+                    </p>
+                    <div class="mt-10 flex flex-col md:flex-row items-center justify-center md:justify-start gap-3">
+                        <a class="text-dating-white-300 capitalize bg-dating-pink-400 py-3 px-6 rounded-full hover:bg-dating-pink-300 transition-colors"
+                            href="inscription.html">find love</a>
+                        <a class="text-dating-white-300 capitalize border border-dating-pink-400 hover:bg-dating-pink-400 transition-colors py-3 px-6 rounded-full"
+                            href="catalogue.html">our catalogs</a>
+                    </div>
+                </div>
+
+                <!-- Colonne droite -->
+                <div class="banner-right w-full">
+                    <img src="./assets/img/bannerImg.png"
+                        class="mix-blend-multiply w-full h-full object-cover drop-shadow" alt="agence matrimoniale" />
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- ================= /HEADER ================= -->
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="mt-[72px] px-4 md:px-28">
+        <h3 class="text-xl font-semibold mb-4">Lorem ipsum dolor sit.</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio nulla repellendus...
+        </p>
+    </main>
+    <!-- ================= /MAIN CONTENT ================= -->
+
+    <!-- Script pour fixer la nav au scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            const classesToAdd = [
+                'fixed', 'top-0', 'left-0', 'right-0', 'w-full', 'z-[60]', 'shadow-lg',
+                'bg-gradient-to-br', 'from-[#D94A79]', 'to-[#F3B7A6]',
+            ];
+
+            const toggleFixedNav = () => {
+                if (window.scrollY > 0) {
+                    navbar.classList.add(...classesToAdd);
+                } else {
+                    navbar.classList.remove(...classesToAdd);
+                }
+            };
+
+            toggleFixedNav();
+            window.addEventListener('scroll', toggleFixedNav);
+        });
+    </script>
+</body>
+
+</html>
